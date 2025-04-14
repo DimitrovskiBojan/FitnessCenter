@@ -1,0 +1,81 @@
+
+.form-container {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+h1 {
+    color: rgb(251, 162, 79);
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #e69500;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-left,
+.form-right {
+    width: 50%;
+}
+
+.form-right{
+    margin-left: 45px;
+}
+
+
+.add-to-cart-btn, .delete-btn {
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #FFA500;
+    color: white;
+}
+
+.add-to-cart-btn:hover, .delete-btn:hover {
+    background-color: #e69500;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}

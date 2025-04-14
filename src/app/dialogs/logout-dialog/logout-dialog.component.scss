@@ -1,0 +1,51 @@
+.logout-container {
+    width: 400px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .logout-container h1 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  
+  .logout-container h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirm-button {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .cancel-button {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  

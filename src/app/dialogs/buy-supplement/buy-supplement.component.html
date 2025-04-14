@@ -1,0 +1,41 @@
+<section
+  class="logout-container"
+  aria-labelledby="confirm-heading"
+  *ngIf="!successfulBuy && !successfulAddress"
+>
+  <h1 id="confirm-heading">Confirm</h1>
+  <h4>Are you sure you want to buy this meal plan?</h4>
+  <h4>Total: {{ data.price }}</h4>
+  <div class="button-container">
+    <button
+      class="confirm-button"
+      (click)="buySupplement()"
+      aria-label="Confirm purchase"
+    >
+      Confirm
+    </button>
+    <button
+      class="cancel-button"
+      (click)="cancel()"
+      aria-label="Cancel purchase"
+    >
+      Cancel
+    </button>
+  </div>
+</section>
+
+<div class="address-enter" *ngIf="successfulBuy && !successfulAddress">
+  <h2>Please enter an address for delivery</h2>
+  <input type="text" id="address" placeholder="Enter your address" class="address-input" />
+  <h2>Phone number for contact</h2>
+  <input type="text" id="phoneNumber" placeholder="Enter phone number" class="address-input" />
+  <button class="submit-button" (click)="submitAddress()">Submit</button>
+</div>
+
+<div class="mealplansuccessful" *ngIf="successfulAddress">
+  <h2>Successfully!</h2>
+  <p>Thank you for your purchase. Delivery in three business days!</p>
+</div>
+
+
+

@@ -1,0 +1,29 @@
+<div class="suplements-container">
+  <div class="container" (click)="openDialog()" style="cursor: pointer;" *ngIf="role == 'ADMIN'">
+    <h2><b>Add new product</b></h2>
+  </div>
+  <div class="container">
+    <div class="search-container">
+      <input #inputElement type="text"  (keyup)="filterByName(inputElement.value)" class="search-input" placeholder="Search..." />
+    </div>
+  </div>
+  <div class="products">
+    <div *ngFor="let product of products" class="product-card" (click)="openProductDialog(product)">
+      <div class="product-image-container">
+        <img
+          *ngIf="product.image"
+          src="{{ product.image }}"
+          alt="{{ product.name }}"
+          class="product-image"
+        />
+      </div>
+      <div class="product-details">
+        <h2>{{ product.name }} - {{ product.type }}</h2>
+        <p><strong>Price:</strong> ${{ product.price }}</p>
+        <p><strong>Weight:</strong> {{ product.weight }}</p>
+        <p><strong>Taste:</strong> {{ product.taste }}</p>
+        <p><strong>Manufacturer:</strong> {{ product.manufacturer }}</p>
+      </div>
+    </div>
+  </div>
+</div>

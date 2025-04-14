@@ -1,0 +1,111 @@
+.mat-dialog-container {
+  width: 400px;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Adds spacing below the header */
+}
+
+.dialog-title {
+  font-size: 30px;
+  margin-bottom: 15px; /* Remove default margin */
+}
+
+.create-account {
+  font-size: 13px;
+  margin-bottom: 15px; /* Remove default margin */
+}
+
+.create-account span {
+  color: #007bff; /* Accent color for 'create account' */
+  cursor: pointer;
+  text-decoration: underline; /* Underline to indicate clickable */
+}
+
+.create-account span:hover {
+  color: #0056b3; /* Darker shade on hover */
+}
+
+.create-account span:focus {
+  outline: none; /* Remove default outline */
+}
+
+.dialog-content {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  color: #fff;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #bbb;
+}
+
+.checkbox-group {
+  margin-top: 20px;
+}
+
+.checkbox-group label {
+  margin-right: 10px;
+}
+
+.checkbox-group div {
+  margin-bottom: 10px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancel-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.login-button {
+  background-color: #ff7b00;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:focus {
+  outline: none;
+}

@@ -1,0 +1,31 @@
+<div class="terms-container" style="padding: 20px;">
+  <div class="terms-header">
+    <h1>{{data.name}} {{data.surname}}'s training terms</h1>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">Star date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Price</th>
+        <th scope="col" *ngIf="role != 'TRAINER'"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let term of trainingTerms; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ term.date }}</td>
+        <td>{{ term.startTime }}</td>
+        <td>{{ term.endTime }}</td>
+        <td>{{ term.price }}</td>
+        <td *ngIf="role != 'TRAINER'">
+          <button class="reserve-button" (click)="reserveTerm(term.id)">
+            RESERVE
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

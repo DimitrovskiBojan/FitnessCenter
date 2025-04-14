@@ -1,0 +1,29 @@
+<div style="background-color: #000000; position: relative;">
+  <app-header (togglePageEvent)="onTogglePage($event)" (toggleSpinnerEvent)="onToggleSpinner($event)"></app-header>
+  
+  <ng-container *ngIf="page == 'home'">
+    <app-home-page (togglePageEvent)="onTogglePage($event)" (toggleSpinnerEvent)="onToggleSpinner($event)"></app-home-page>
+  </ng-container>
+  
+  <ng-container *ngIf="page == 'supplements'">
+    <app-suplements></app-suplements>
+  </ng-container>
+
+  <ng-container *ngIf="page == 'meal-plans'">
+    <app-meal-plans></app-meal-plans>
+  </ng-container>
+  
+  <ng-container *ngIf="page == 'profile'">
+    <app-profile></app-profile>
+  </ng-container>
+
+  <ng-container *ngIf="page == 'trainers'">
+    <app-trainers-page></app-trainers-page>
+  </ng-container>
+
+  <div class="spinner" *ngIf="isLoading">
+    <app-spinner></app-spinner>
+  </div>
+  
+  <app-footer></app-footer>
+</div>

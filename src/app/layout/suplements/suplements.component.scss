@@ -1,0 +1,143 @@
+.container {
+  padding: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.product-details {
+  padding: 15px 0;
+  text-align: left;
+}
+
+.product-details h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.product-details p {
+  margin: 5px 0;
+}
+
+/* Styles for product cards */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  width: 300px;
+  background: rgb(255, 255, 255) 50%; /* Adjust background as needed */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image-container {
+  width: 100%;
+  height: 200px; /* Set a fixed height for consistency */
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintain aspect ratio and fit within container */
+}
+
+.product-details {
+  padding: 20px;
+}
+
+.product-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #000000;
+  text-align: center;
+}
+
+.product-details p {
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+/* Accent color */
+.product-details strong {
+  color: rgb(255, 112, 17);
+  font-size: 17px;
+}
+
+.suplements-container {
+  background-color: #ddd;
+  min-height: 1000px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end; /* Aligns to the right side */
+  padding: 20px; /* Adjust spacing as needed */
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 300px; /* Adjust width as needed */
+  transition: border-color 0.3s ease; /* Smooth transition for border color change */
+}
+.dropdown{
+  height: 20px;
+}
+
+.search-input:focus {
+  border-color: orange; /* Changes border color to orange on focus */
+}
+
+@media (max-width: 768px) {
+  .container {
+    justify-content: flex-start; /* Aligns to the left for smaller screens */
+  }
+  
+  .search-input {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+

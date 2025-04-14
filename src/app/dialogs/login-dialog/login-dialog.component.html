@@ -1,0 +1,109 @@
+<div class="mat-dialog-container" *ngIf="register == 'no'">
+  <div class="login-header">
+    <h1 class="dialog-title">Login</h1>
+    <h3 class="create-account">
+      or <span (click)="showRegister()">create account</span>
+    </h3>
+  </div>
+  <div class="dialog-content">
+    <form>
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter your username"
+        #username
+        required
+      />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        #password
+        required
+        (keypress)="onKeyPress($event)"
+      />
+      <p style="color: red;" *ngIf="problemWithLogin">Incorrect username or password</p>
+    </form>
+  </div>
+  <div class="dialog-actions">
+    <button class="cancel-button" mat-dialog-close>Cancel</button>
+    <button class="login-button" color="primary" (click)="performLogin()">
+      Login
+    </button>
+  </div>
+</div>
+
+<div class="mat-dialog-container" *ngIf="register == 'yes'">
+  <div>
+    <div class="login-header">
+      <h1 class="dialog-title">New User</h1>
+      <h3 class="create-account">
+        or <span (click)="hideRegister()">login with existing account</span>
+      </h3>
+    </div>
+    <div class="dialog-content">
+      <form>
+        <label for="username-register">Username</label>
+        <input
+          type="text"
+          id="username-register"
+          placeholder="Enter your username"
+          #username
+          required
+        />
+        <label for="password-register">Password</label>
+        <input
+          type="password"
+          id="password-register"
+          placeholder="Enter your password"
+          #password
+          required
+        />
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+        <label for="surname">Surname</label>
+        <input
+          type="text"
+          id="surname"
+          placeholder="Enter your surname"
+          required
+        />
+
+        <!-- Checkbox Section -->
+        <div class="checkbox-group">
+          <label for="role">Select Role:</label>
+          <div>
+            <input
+              type="radio"
+              id="trainer"
+              name="role"
+              value="trainer"
+              #trainer
+              [(ngModel)]="selectedRole"
+            />
+            <label for="trainer">Trainer</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="client"
+              name="role"
+              value="client"
+              #client
+              [(ngModel)]="selectedRole"
+            />
+            <label for="client">Client</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="dialog-actions">
+    <button class="cancel-button" mat-dialog-close>Cancel</button>
+    <button class="login-button" color="primary" (click)="performRegister()">
+      Register
+    </button>
+  </div>
+</div>

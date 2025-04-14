@@ -1,0 +1,32 @@
+<div class="form-container">
+  <h1>Create a New Product</h1>
+  <form (submit)="createProduct($event)" enctype="multipart/form-data">
+    <div class="form-group">
+      <div class="form-left">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required />
+
+        <label for="weight">Weight:</label>
+        <input type="text" id="weight" name="weight" required />
+      </div>
+      <div class="form-right">
+        <label for="taste">Taste:</label>
+        <input type="text" id="taste" name="taste" required />
+
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" required />
+
+        <label for="manufacturer">Manufacturer:</label>
+        <input type="text" id="manufacturer" name="manufacturer" required />
+
+        <label for="image">Image Upload:</label>
+        <input style="color: rgb(255, 255, 255);" type="file" id="image" name="image" (change)="onFileSelected($event)" accept="image/*" required />
+      </div>
+    </div>
+
+    <button class="add-to-cart-btn" type="submit">Create Product</button>
+  </form>
+</div>

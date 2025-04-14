@@ -1,0 +1,11 @@
+.successContainer {
+    background-color: rgb(57, 179, 0); /* White background */
+    color: white; /* White text */
+    padding: 20px; /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center; /* Center the text */
+}
+
+.successContainer h2 {
+    margin: 0; /* Remove default margin */
+}

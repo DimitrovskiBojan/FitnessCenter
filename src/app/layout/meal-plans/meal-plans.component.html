@@ -1,0 +1,33 @@
+
+<div class="trainer-home-page-container">
+  <div class="trainer-profile">
+    <div style="padding: 10px; margin-top: 50px;">
+      <div class="meal-plans-header">
+        <h1>Meal Plans</h1>
+        
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Type</th>
+            <th scope="col" style="max-width: 120px;">Description</th>
+            <th scope="col">Created By</th>
+            <th scope="col">Price</th>
+            <th scope="col" *ngIf="role == 'CLIENT'">Buy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mealPlan of mealPlans; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ mealPlan.type }}</td>
+            <td (click)="descriptionDialog(mealPlan)" style="max-width: 120px; cursor: pointer;">{{maxLengthOfDescription(mealPlan.description)}}</td>
+            <td>{{ mealPlan.created_by.name }}</td>
+            <td>{{ mealPlan.price }}</td>
+            <td *ngIf="role == 'CLIENT'"><button class="orange-button" (click)="buyDialog(mealPlan.price, mealPlan.id)" >BUY</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

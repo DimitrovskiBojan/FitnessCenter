@@ -1,0 +1,132 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 150px;
+  background: transparent;
+  color: #fff;
+  max-height: 120px;
+}
+.navbar-logo {
+  max-height: 140px;
+  width: 100px; /* Adjust according to your logo size */
+}
+.navbar-items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+}
+.navbar-item {
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+.logo-image {
+  max-height: 150px;
+}
+.video-container {
+  position: relative;
+}
+
+.overlay {
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; /* Ensure the header is above the video */
+  height: 200px;
+}
+
+.darker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* Ensure the header is above the video */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.about-us-container {
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(
+    to right,
+    black 0%,
+    rgb(251, 162, 79) 50%,
+    black 100%
+  );
+
+  text-align: center;
+  padding-top: 70px;
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+  }
+}
+
+.card {
+  margin-left: 40px;
+  height: 270px;
+  color: white;
+  background-color: black;
+}
+
+.contact_location_container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  padding-left: 13%;
+  padding-right: 13%;
+  height: 500px;
+  background-color: black;
+}
+
+.contact_location_container h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.location_container {
+  margin-left: 200px;
+}
+
+.contact_container .phone-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact_container .phone-container .contact_icon {
+  display: flex;
+  align-items: center;
+}
+
+.contact_container .phone-container .contact_text {
+  font-size: 1.8em; /* Adjust the font size as needed */
+  color: orange; /* Adjust the color as needed */
+  margin-left: 25px;
+}
+
+.dropdown-toggle{
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.dropdown-menu{
+  background-color: rgba(0, 0, 0, 0.5);  
+}
+
+.dropdown-item{
+  color: white;
+}

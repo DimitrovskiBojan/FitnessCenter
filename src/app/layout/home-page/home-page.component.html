@@ -1,0 +1,173 @@
+<div class="home-page-container" *ngIf="role != 'ADMIN'">
+  <div class="images-container">
+    <!-- Include Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Include Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Carousel -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+        ></li>
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+        ></li>
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+        ></li>
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+        ></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-100"
+            src="../../../assets/images/slika-teretana-1.png"
+            alt="First slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="https://www.frontsigns.com/wp-content/uploads/2021/07/gym-design-ideas.jpg"
+            alt="Second slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="https://cdn.shopify.com/s/files/1/0141/5242/t/16/assets/fitsix-4-bright_LIQo.jpg?v=162012172235"
+            alt="Third slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="https://www.gymleco.com/wp-content/uploads/2022/09/hur-du-bygger-framgangsrikt-gym.jpg"
+            alt="Fourth slide"
+          />
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+    <!-- Cards container for additional content -->
+    <div class="cards-container">
+      <!-- Example Card -->
+      <div class="card" (click)="toggleTrainersPage()">
+        <h2 class="card-title">PERSONAL TRAINERS</h2>
+      </div>
+      <!-- Repeat similar cards as needed -->
+      <div class="card" (click)="toggleSupplementsPage()" clickable>
+        <h2 class="card-title">SUPLEMENTS</h2>
+      </div>
+      <div class="card" (click)="toggleMealPlansPage()" clickable>
+        <h2 class="card-title">MEAL PLANS</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contact-container" *ngIf="role != 'ADMIN'">
+  <div class="contact">
+    <h1>Contact Information</h1>
+    <p>Phone: +123 456 7890</p>
+    <p>Email: example.example.com</p>
+    <p>Location: 123 Main Street, City, Country</p>
+  </div>
+  <div class="location">
+    <!-- Embed your map here, e.g., using Google Maps iframe -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.756337324565!2d-122.0842496846928!3d37.422065979826235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbaa5c9b8c0d7%3A0x8769a8326c4ab568!2sGoogle!5e0!3m2!1sen!2sus!4v1620077692137!5m2!1sen!2sus"
+      width="100%"
+      height="100%"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
+
+
+<div class="role-admin" *ngIf="role == 'ADMIN'">
+  <div class="add-credits"> 
+    <form class="admin-form">
+      <div class="form-group">
+        <h1 style="color: rgb(251, 162, 79)">Add credits to clients</h1>
+        <label for="username">Username:</label>
+        <input type="text" [(ngModel)]="username" id="username_for_credits" name="username" placeholder="Enter username" required />
+      </div>
+      <div class="form-group">
+        <label for="credits">Credits:</label>
+        <input type="number" [(ngModel)]="credits" id="credits" name="credits" placeholder="Enter Credits" required />
+      </div>
+      <div class="form-actions">
+        <button type="submit" (click)="submitCredits()">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="orders">
+    <h1>Orders</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Delivery address</th>
+          <th scope="col">Product</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders; index as i">
+          
+          <td scope="row">{{ i + 1 }}</td>
+          <td>{{order.number}}</td>
+          <td>{{order.address}}</td>
+          <td (click)="openProductDialog(order.product)" style="text-decoration: underline; font-weight: bold;">Product</td>
+          <td><button class="delete-button" (click)="deleteOrder(order.id)">
+            DELETE
+          </button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<section class="logout-container" aria-labelledby="confirm-heading" *ngIf="!successful">
+  <h1 id="confirm-heading">Confirm</h1>
+  <h4>Are you sure you want to buy this meal plan?</h4>
+  <h4>Total: {{ data.price }}</h4>
+  <div class="button-container">
+    <button class="confirm-button" (click)="buyMealPlan()" aria-label="Confirm purchase">Confirm</button>
+    <button class="cancel-button" (click)="cancel()" aria-label="Cancel purchase">Cancel</button>
+  </div>
+</section>
+
+<div class="mealplansuccessful" *ngIf="successful">
+  <h2>Meal Plan Purchased Successfully!</h2>
+  <p>Thank you for your purchase. Enjoy your meals!</p>
+</div>

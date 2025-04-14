@@ -1,0 +1,102 @@
+<section
+  class="logout-container"
+  aria-labelledby="confirm-heading"
+  *ngIf="data.for == 'delete-term'"
+>
+  <h1 id="confirm-heading">Confirm</h1>
+  <h4>Are you sure you want to delete this term?</h4>
+  <div class="button-container">
+    <button
+      class="confirm-button"
+      (click)="deleteTerm()"
+      aria-label="Confirm purchase"
+    >
+      Confirm
+    </button>
+    <button
+      class="cancel-button"
+      (click)="cancel()"
+      aria-label="Cancel purchase"
+    >
+      Cancel
+    </button> 
+  </div>
+</section>
+
+<section
+  class="logout-container"
+  aria-labelledby="confirm-heading"
+  *ngIf="data == 'cancel-term'"
+>
+  
+  <h4>Are you sure you want to cancel this term?</h4>
+  <h3 style="color: red;">Credits will not be returned</h3>
+  <div class="button-container">
+    <button
+      class="confirm-button"
+      (click)="deleteTerm()"
+      aria-label="Confirm purchase"
+    >
+      Confirm
+    </button>
+    <button
+      class="cancel-button"
+      (click)="cancel()"
+      aria-label="Cancel purchase"
+    >
+      Cancel
+    </button>
+  </div>
+</section>
+
+
+<section
+  class="logout-container"
+  aria-labelledby="confirm-heading"
+  *ngIf="data == 'reserve-term'"
+>
+  
+  <h4>Are you sure you want to reserve this term?</h4>
+  <div class="button-container">
+    <button
+      class="confirm-button"
+      (click)="deleteTerm()"
+      aria-label="Confirm purchase"
+    >
+      Confirm
+    </button>
+    <button
+      class="cancel-button"
+      (click)="cancel()"
+      aria-label="Cancel purchase"
+    >
+      Cancel
+    </button>
+  </div>
+</section>
+
+
+<section
+  class="logout-container"
+  aria-labelledby="confirm-heading"
+  *ngIf="data == 'delete-product'"
+>
+  
+  <h4>Are you sure you want to delete this product?</h4>
+  <div class="button-container">
+    <button
+      class="confirm-button"
+      (click)="deleteTerm()"
+      aria-label="Confirm purchase"
+    >
+      Confirm
+    </button>
+    <button
+      class="cancel-button"
+      (click)="cancel()"
+      aria-label="Cancel purchase"
+    >
+      Cancel
+    </button>
+  </div>
+</section>

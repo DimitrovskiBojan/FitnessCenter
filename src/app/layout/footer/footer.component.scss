@@ -1,0 +1,21 @@
+footer {
+  background: linear-gradient(
+    to right,
+    black 0%,
+    rgb(251, 162, 79) 50%,
+    black 100%
+  );
+  padding: 20px;
+  text-align: center;
+}
+a{
+    margin: 0 10px;
+    font-size: medium;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-container{
+  margin-top: 10px;
+}

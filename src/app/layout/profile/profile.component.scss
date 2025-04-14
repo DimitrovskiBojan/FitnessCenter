@@ -1,0 +1,137 @@
+.trainer-home-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+
+.trainer-profile {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.client-credits {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fba24f;
+  margin-top: 15px;
+}
+
+.trainer-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fba24f;
+  margin-top: 15px;
+}
+
+.meal-plans-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.meal-plans-header h1 {
+  font-size: 1.8rem;
+  color: #fba24f;
+  text-align: center;
+}
+
+.add-meal-plan {
+  cursor: pointer;
+  color: #fba24f;
+  text-decoration: underline;
+}
+
+.add-meal-plan:hover {
+  color: #fba24f;
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  background-color: #fba24f;
+  color: #ffffff;
+  padding: 10px;
+  text-align: left;
+  text-align: center;
+}
+
+.table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #dddddd;
+  color: #333;
+  margin: 4px 2px;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.downloadPlan {
+  font-weight: bold;
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+.delete-button {
+  background-color: #ff2828; /* Orange background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 5px 10px; /* Top and bottom padding of 10px, left and right padding of 20px */
+  text-align: center; /* Center text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Allow padding and margin */
+  font-size: 15px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+.delete-button:hover {
+  background-color: #a30000; /* Darker orange on hover */
+}
+.reserved-status {
+  
+  width: 250px; /* Set your desired width */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+@media (max-width: 768px) {
+  .trainer-profile {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .meal-plans-header h1 {
+    font-size: 1.5rem;
+  }
+}

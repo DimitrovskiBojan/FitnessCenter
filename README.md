@@ -77,7 +77,7 @@ npm install -g @angular/cli
 ### 1. Clone and Start the Backend
 
 ```bash
-git  clone  https://github.com/your-username/fitness-center-backend.git
+git  clone  https://github.com/DimitrovskiBojan/fitness_center_backend.git
 ```
 
 ### 2. Clone and start this project 
